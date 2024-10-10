@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-between align-items-center">
+        <div class="col">
+            <div class="card shadow border-0 rounded">
+                <div class="row card-body align-items-center">
+                    <div class="col-md-6">
+                        <h1 class="display-2 mb-4">Exam Security.<br class="d-none d-md-inline"> Done Right.</h1>
+                        <h3 class="display-4 mb-4">Deter. Detect. Prevent.</h3>
+                        <p class="lead mb-4 text-muted">Online proctoring to advance your learning and testing program.
+                            Validate knowledge. Reduce costs. Expand access.</p>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <img src="{{ url_for('static', filename='myproctoraiindex.gif') }}" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content content-bg py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2 text-center">
+                <h2 class="display-4 mb-4">The MyProctor.ai Learning Integrity Platform</h2>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-large mb-5">
+            <div class="col-md-6">
+                <div id="platform-exam_proctoring" class="platform-animation text-center">
+                    <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_omszt4va.json"
+                        background="transparent" speed="1" style="width: 300px; height: 300px;" loop
+                        autoplay></lottie-player>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 offset-lg-1">
+                <h1 class="display-3 mb-4">Our Mission</h1>
+                <p class="lead mb-4 text-muted">Making green exam assessment reach the last mile across the globe.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-large mb-5">
+            <div class="col-md-6 order-md-2 offset-lg-1">
+                <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_fdLGjD.json" background="transparent"
+                    speed="1" style="width: 600px; height: 500px;" loop autoplay></lottie-player>
+            </div>
+            <div class="col-md-6 col-lg-5 order-md-1">
+                <h1 class="display-3 mb-4">Our Vision</h1>
+                <p class="lead mb-4 text-muted">We believe “Future of world starts in a Classroom”. Our vision is to
+                    invent & develop secure and future-ready Ed-tech solutions featuring simple functionality.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center my-large mb-5">
+            <div class="col-md-6">
+                <div id="platform-exam_proctoring" class="platform-animation text-center">
+                    <img class="mb-3 mt-3 img-fluid" src="/static/e17.png" alt="Admin Dashboard">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 offset-lg-1">
+                <h1 class="display-3 mb-4">Exam Proctoring</h1>
+                <p class="lead mb-4 text-muted">An all-inclusive remote monitoring solution, including image
+                    verification and computer restrictions.
+                <ul class="feature-list mt-4">
+                    <li><i class="fas fa-check-circle"></i> Automated Proctoring</li>
+                    <li><i class="fas fa-check-circle"></i> Live Proctoring</li>
+                    <li><i class="fas fa-check-circle"></i> Professional Review</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <div id="platform-data_analytics" class="platform-animation mb-3 mt-3 text-center">
+                    <img class="mb-3 mt-3 img-fluid" src="/static/Aggregate-Exam-Data.png" alt="Data Analytics">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 offset-lg-1">
+                <h1 class="display-3 mb-4">Data Analytics</h1>
+                <p class="lead mb-4 text-muted">Instant, objective data is immediately available after every
+                    assessment, with parameters set by instructors or administrators.</p>
+                <ul class="feature-list mt-4">
+                    <li><i class="fas fa-check-circle"></i> Administrative Dashboard</li>
+                    <li><i class="fas fa-check-circle"></i> Student Monitoring</li>
+                    <li><i class="fas fa-check-circle"></i> Aggregate Exam Data</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6 order-md-2 offset-lg-1">
+                <img class="mb-3 mt-3 img-fluid" src="/static/admin-dashboard-1.png" alt="Admin Dashboard 1">
+            </div>
+            <div class="col-md-6 col-lg-5 order-md-1">
+                <h1 class="display-3 mb-4">Admin Dashboard</h1>
+                <p class="lead mb-4 text-muted">Create global settings and usage reports that give you actionable
+                    information by department, school, or institution. Filter activity and reporting by course,
+                    test-taker, or exam.</p>
+                <p class="lead mb-4 text-muted">Manage exam parameters, computer requirements, account information,
+                    faculty controls, and Gradebook settings.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <div id="platform-professional_review" class="platform-animation mb-3 mt-3 text-center">
+                    <img class="mb-3 mt-3 img-fluid" src="/static/professional-review.png" alt="Professional Review">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 offset-lg-1">
+                <h1 class="display-3 mb-4">Professional Review</h1>
+                <p class="lead mb-4 text-muted">Our highly-trained experts are available to analyze exam proctoring
+                    for issues of academic dishonesty. We deliver detailed reporting same day, next day, or in 3 days
+                    based on your needs.</p>
+            </div>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <div id="platform-live_proctoring" class="platform-animation mb-3 mt-3 text-center">
+                    <img class="mb-3 mt-3 img-fluid" src="/static/live-proctoring.png" alt="Live Proctoring">
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-5 offset-lg-1">
+                <h1 class="display-3 mb-4">Live Proctoring</h1>
+                <p class="lead mb-4 text-muted">It allows immediate intervention during an exam and provides full
+                    live reporting on demand.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .feature-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .feature-list li {
+        margin: 10px 0;
+        font-size: 1.2em;
+        color: #343a40;
+    }
+
+    .feature-list i {
+        color: #007bff;
+        margin-right: 8px;
+    }
+
+    .content-bg {
+        background-color: #f8f9fa;
+        padding: 30px 0;
+    }
+
+    .platform-animation {
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+{% endblock %}

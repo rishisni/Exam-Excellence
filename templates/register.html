@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<main>
+    <section class="d-flex align-items-center my-1" style="height: 100vh;">
+        <div class="container">
+            <div class="row justify-content-center align-items-center" style="height: 100%;">
+                <div class="col-lg-12 col-xl-10"> <!-- Adjusted to make the box wider -->
+                    <!-- Unified Box with increased height -->
+                    <div class="card shadow-soft border rounded hover-effect" style="height: 70vh;">
+                        <div class="row g-0 h-100">
+                            <!-- Left Side: Registration Form -->
+                            <div class="col-lg-6 p-4 d-flex flex-column justify-content-center">
+                                <div class="text-center mb-4">
+                                    <h1 class="h4">Create a new account</h1>
+                                </div>
+                                <!-- Registration Form -->
+                                <form method="POST" action="/register">
+                                    <div class="mb-3 input-group">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                        <input type="text" class="form-control form-control-lg" id="name" name="name" required placeholder="Name">
+                                    </div>
+
+                                    <div class="mb-3 input-group">
+                                        <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                                        <input type="text" class="form-control form-control-lg" id="roll_or_faculty_id" name="roll_or_faculty_id" placeholder="Roll No / Faculty ID">
+                                    </div>
+
+                                    <div class="mb-3 input-group">
+                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        <input type="email" class="form-control form-control-lg" id="email" name="email" placeholder="Email">
+                                    </div>
+
+                                    <div class="mb-3 input-group">
+                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                        <input type="password" class="form-control form-control-lg" id="password" name="password" placeholder="Password" required>
+                                    </div>
+
+                                    <div class="mb-3 input-group">
+                                        <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                        <input type="text" class="form-control form-control-lg" id="phone" name="phone" placeholder="Phone Number">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="form-label">Register As</label><br>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="is_student" id="student" value="student">
+                                            <label class="form-check-label" for="student">Student</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="is_faculty" id="faculty" value="faculty" >
+                                            <label class="form-check-label" for="faculty">Faculty</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-outline-dark btn-lg">Register</button>
+                                    </div>
+                                </form>
+
+                                <!-- Flash messages for registration errors -->
+                                {% if get_flashed_messages() %}
+                                    <div class="alert alert-danger mt-3">
+                                        {% for message in get_flashed_messages() %}
+                                            <p>{{ message }}</p>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Right Side: Image with increased size -->
+                            <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+                                <img src="{{ url_for('static', filename='personal_information.png') }}" class="img-fluid" alt="Secure register" style="width: 100%; height: auto; max-height: 70vh; object-fit: cover; border-top-right-radius: .25rem; border-bottom-right-radius: .25rem;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<style>
+    .hover-effect {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Always show shadow */
+        transform: scale(1.02); /* Always scale up */
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+</style>
+{% endblock %}
